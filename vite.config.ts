@@ -1,20 +1,17 @@
-{
-  "name": "workspace",
-  "version": "0.0.0",
-  "license": "MIT",
-  "packageManager": "pnpm@10.11.1",
-  "scripts": {
-    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "vite build"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
-  "private": true,
-  "dependencies": {
-    "@replit/connectors-sdk": "^0.4.1"
+  server: {
+    host: "0.0.0.0",
   },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
-    "prettier": "^3.9.6",
-    "typescript": "~5.9.3",
-    "vite": "^7.0.0"
-  }
-}
+});
