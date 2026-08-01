@@ -8,3 +8,25 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.backrooms {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#111, #000);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: yellow;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
