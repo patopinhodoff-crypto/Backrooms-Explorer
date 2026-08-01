@@ -1,14 +1,8 @@
-
-import "./App.css";
-
-function App() {
+export default function App() {
   return (
-    <div className="container">
+    <div>
       <h1>Backrooms Explorer</h1>
-      <p>O sistema está funcionando.</p>
-      <button>Entrar nas Backrooms</button>
+      <p>Jogo carregando...</p>
     </div>
   );
 }
-
-export default App;
