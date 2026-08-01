@@ -1,8 +1,14 @@
+import "./app.css";
+
 export default function App() {
   return (
-    <div>
+    <main className="backrooms">
       <h1>Backrooms Explorer</h1>
-      <p>Jogo carregando...</p>
-    </div>
+      <p>Entrando nos níveis...</p>
+
+      <button>
+        Iniciar exploração
+      </button>
+    </main>
   );
 }
