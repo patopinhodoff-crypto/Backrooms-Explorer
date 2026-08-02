@@ -1,38 +1,32 @@
-type Props = {
-  nome: string;
-  classe: string;
-  perigo: string;
-  descricao: string;
-};
+import { Level } from "../data/levels";
 
-export default function LevelCard({
-  nome,
-  classe,
-  perigo,
-  descricao,
-}: Props) {
+interface Props {
+  level: Level;
+}
+
+export default function LevelCard({ level }: Props) {
   return (
-    <div
-      style={{
-        background: "#161616",
-        border: "1px solid #333",
-        borderRadius: "12px",
-        padding: "20px",
-        marginBottom: "20px",
-      }}
-    >
-      <h2>{nome}</h2>
+    <div className="level-card">
+      <h2>
+        Nível {level.id} - {level.nome}
+      </h2>
 
-      <p><b>Classe:</b> {classe}</p>
+      <p>
+        <b>Classe:</b> {level.classe}
+      </p>
 
-      <p><b>Perigo:</b> {perigo}</p>
+      <p>
+        <b>Perigo:</b> {level.perigo}
+      </p>
 
-      <p>{descricao}</p>
+      <p>{level.descricao}</p>
 
-      <button>📖 Ler dossiê</button>
+      <p>
+        <b>Entidades:</b> {level.entidades.join(", ")}
+      </p>
 
-      <button style={{ marginLeft: 10 }}>
-        🎮 Explorar
+      <button>
+        Explorar nível
       </button>
     </div>
   );
