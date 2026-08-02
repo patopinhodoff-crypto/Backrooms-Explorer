@@ -1,34 +1,42 @@
-import Sidebar from "./components/Sidebar";
-import LevelCard from "./components/LevelCard";
 import { levels } from "./data/levels";
 
 export default function App() {
   return (
-    <div>
-      <Sidebar />
+    <div className="container">
+      <h1>📚 Backrooms Explorer</h1>
 
-      <main
-        style={{
-          marginLeft: "260px",
-          padding: "30px",
-        }}
-      >
-        <h1>📚 Backrooms Explorer</h1>
+      <p className="intro">
+        Arquivo digital das Backrooms. Explore níveis, entidades e relatos de sobreviventes.
+      </p>
 
-        <p>
-          Uma enciclopédia das Backrooms com níveis, entidades e documentos.
-        </p>
-
+      <div className="levels">
         {levels.map((level) => (
-          <LevelCard
-            key={level.id}
-            nome={`Nível ${level.id} - ${level.nome}`}
-            classe={level.classe}
-            perigo={level.perigo}
-            descricao={level.descricao}
-          />
+          <div className="level-card" key={level.id}>
+            <h2>
+              🟨 Nível {level.id} — {level.nome}
+            </h2>
+
+            <p>
+              <strong>Classe:</strong> {level.classe}
+            </p>
+
+            <p>
+              <strong>Perigo:</strong> {level.perigo}
+            </p>
+
+            <p>
+              {level.descricao}
+            </p>
+
+            <h3>👁 Entidades</h3>
+            <ul>
+              {level.entidades.map((entidade, index) => (
+                <li key={index}>{entidade}</li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </main>
+      </div>
     </div>
   );
 }
