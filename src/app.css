@@ -1,24 +1,38 @@
-aside {
+body {
+  margin: 0;
+  background: #050505;
   color: white;
+  font-family: Arial, sans-serif;
 }
 
-aside h2 {
-  color: #ffd54a;
-  margin-bottom: 30px;
+.container {
+  padding: 30px;
 }
 
-aside p {
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
+h1 {
+  color: #ffcc00;
 }
 
-aside p:hover {
-  background: #222;
-  transform: translateX(5px);
+.intro {
+  color: #aaa;
 }
 
-main {
-  min-height: 100vh;
+.levels {
+  display: grid;
+  gap: 20px;
+}
+
+.level-card {
+  background: #111;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.level-card h2 {
+  color: #ffcc00;
+}
+
+.level-card h3 {
+  color: #ff5555;
 }
