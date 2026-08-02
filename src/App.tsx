@@ -1,40 +1,22 @@
 import { levels } from "./data/levels";
+import LevelCard from "./components/LevelCard";
 
 export default function App() {
   return (
-    <div className="container">
+    <div className="app">
       <h1>📚 Backrooms Explorer</h1>
 
       <p className="intro">
-        Arquivo digital das Backrooms. Explore níveis, entidades e relatos de sobreviventes.
+        Uma enciclopédia interativa das Backrooms.
+        Explore níveis, descubra entidades e veja como sobreviver.
       </p>
 
       <div className="levels">
         {levels.map((level) => (
-          <div className="level-card" key={level.id}>
-            <h2>
-              🟨 Nível {level.id} — {level.nome}
-            </h2>
-
-            <p>
-              <strong>Classe:</strong> {level.classe}
-            </p>
-
-            <p>
-              <strong>Perigo:</strong> {level.perigo}
-            </p>
-
-            <p>
-              {level.descricao}
-            </p>
-
-            <h3>👁 Entidades</h3>
-            <ul>
-              {level.entidades.map((entidade, index) => (
-                <li key={index}>{entidade}</li>
-              ))}
-            </ul>
-          </div>
+          <LevelCard
+            key={level.id}
+            level={level}
+          />
         ))}
       </div>
     </div>
