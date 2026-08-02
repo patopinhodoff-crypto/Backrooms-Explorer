@@ -1,49 +1,66 @@
 body {
   margin: 0;
-  background: #050505;
+  background: black;
   color: white;
   font-family: Arial, sans-serif;
 }
 
-#root {
+.home {
   min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.9)
+    ),
+    url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.app {
-  padding: 30px;
+.overlay {
+  text-align: center;
+  max-width: 700px;
+  padding: 40px;
 }
 
 h1 {
-  text-align: center;
-  color: #ffcc00;
+  font-size: 70px;
+  letter-spacing: 15px;
+  margin: 0;
 }
 
-.intro {
-  text-align: center;
-  color: #aaa;
+h2 {
+  color: #d4af37;
+  letter-spacing: 5px;
 }
 
-.levels {
-  display: grid;
-  gap: 20px;
-  margin-top: 30px;
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-.level-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.level-card h2 {
-  color: #ffcc00;
+.buttons {
+  margin-top: 40px;
 }
 
 button {
-  background: #ffcc00;
-  border: none;
-  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 5px;
+  font-size: 18px;
+}
+
+button:hover {
+  background: #d4af37;
+  color: black;
 }
